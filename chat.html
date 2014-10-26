@@ -1,0 +1,46 @@
+  <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <title>chat</title>
+</head>
+
+<body>
+ <div class="container">
+      <div class="header">
+	  
+	  <br>
+	  <h2> Chat Room </h2>
+{{> entry}}
+<hr>
+ {{> messages}}
+ </div>
+</div>
+</body>
+
+<template name="entry">
+
+        
+<form role="form">
+  <div class="form-group">
+    <label for="mailBox">Email address</label>
+    <input type="email" class="form-control" id="mailBox" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="messageBox">Message</label>
+    <input type="text" class="form-control" id="messageBox" placeholder="Message">
+  </div>
+  <button id="senden" type="submit" class="btn btn-success">Senden</button>
+</form>
+
+</template>
+	
+<template name="messages">
+	{{#each messages}}
+		{{> message}}
+	{{/each}}
+</template>
+		
+<template name="message">
+	<p class="bg-info"><strong>{{name}}:</strong> {{message}}</p>
+</template>
