@@ -5,6 +5,8 @@ mychatroom Meteor Projekt
 
 Run it locally:
 
-$ cd mychatroom\n
-$ meteor\n
+$ cd mychatroom
+
+$ meteor
+
 => Meteor server running on: http://localhost:3000/
